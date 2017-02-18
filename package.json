@@ -1,0 +1,25 @@
+{
+  "name": "thesis",
+  "version": "1.0.0",
+  "description": "acupressure tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huayuheh/thesis-AcuPoint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huayuheh/thesis-AcuPoint/issues"
+  },
+  "homepage": "https://github.com/huayuheh/thesis-AcuPoint#readme",
+  "dependencies": {
+    "ionic": "^2.2.1",
+    "minimatch": "^3.0.3",
+    "node-uuid": "^1.4.7",
+    "uuid": "^3.0.1"
+  }
+}
