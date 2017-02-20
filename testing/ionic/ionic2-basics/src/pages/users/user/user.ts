@@ -18,10 +18,8 @@ export class UserPage implements OnInit{
   ngOnInit(){
     this.name = this.navParams.get('userName');
   }
-
   onGoBack(){
     //this.navCtrl.pop();
     this.navCtrl.popToRoot();
   }
-
 }
