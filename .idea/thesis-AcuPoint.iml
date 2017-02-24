@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/AcuPoint/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/testing/ionic/ionic2-basics/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/testing/ionic/myApp/platforms" />
