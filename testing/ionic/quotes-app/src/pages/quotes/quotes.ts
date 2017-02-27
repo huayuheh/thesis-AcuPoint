@@ -25,7 +25,20 @@ export class QuotesPage implements OnInit{
     const alert = this.alertCtrl.create({
       title:'Add quote',
       subTitle:'Are you sure?',
-      message:'Are you sure you want to add the quote?'
+      message:'Are you sure you want to add the quote?',
+      buttons:[
+        {
+          text: 'Yes, go ahead',
+          handler: () =>{
+            console.log('OK');
+          }
+        },{
+          text: 'No, I change my mind',
+          handler: () =>{
+            console.log('Cancelled');
+          }
+        }
+      ]
     });
 
     alert.present();
