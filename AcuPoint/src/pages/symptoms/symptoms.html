@@ -10,7 +10,7 @@
   <ion-list>
     <button
             ion-item *ngFor="let symGroup of symptomCollection"
-            [navPush]="listofsymPage" [navParams]="symGroup">
+            [navPush]="symptomlistPage" [navParams]="symGroup">
       <ion-icon [name]="symGroup.icon" item-left></ion-icon>
       <h2>{{ symGroup.body | uppercase  }}</h2>
       <p>{{  symGroup.symptoms.length }} Symptoms</p>

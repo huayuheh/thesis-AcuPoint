@@ -5,13 +5,17 @@ import { HomePage } from '../pages/home/home';
 import { RecordPage } from '../pages/record/record';
 import { SymptomsPage } from '../pages/symptoms/symptoms';
 import { TabsPage } from '../pages/tabs/tabs';
+import { SymptomlistPage } from "../pages/symptomlist/symptomlist";
+
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SymptomsPage,
     RecordPage,
-    TabsPage
+    TabsPage,
+    SymptomlistPage
 
   ],
   imports: [
@@ -23,7 +27,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     HomePage,
     SymptomsPage,
     RecordPage,
-    TabsPage
+    TabsPage,
+    SymptomlistPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

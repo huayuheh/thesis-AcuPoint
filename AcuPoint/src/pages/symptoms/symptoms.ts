@@ -4,7 +4,7 @@ import {  NavParams, AlertController } from 'ionic-angular';
 import { Symptom } from "../../data/symptoms.interface";
 
 import symptoms from '../../data/symptoms';
-import {ListofsymPage} from "../listofsym/listofsym";
+import { SymptomlistPage } from "../symptomlist/symptomlist";
 
 @Component({
   selector: 'page-symptoms',
@@ -13,7 +13,7 @@ import {ListofsymPage} from "../listofsym/listofsym";
 
 export class SymptomsPage implements OnInit{
   symptomCollection: {body: string, symptoms: Symptom[], icon: string }[];
-  listofsymPage = ListofsymPage;
+  symptomlistPage = SymptomlistPage;
 
   ngOnInit(){
     this.symptomCollection = symptoms;
