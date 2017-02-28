@@ -1,22 +1,44 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, OnInit } from '@angular/core';
+import {  NavParams, AlertController } from 'ionic-angular';
+import { Symptom } from "../../data/symptoms.interface";
 
-/*
-  Generated class for the Symptomlist page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-symptomlist',
   templateUrl: 'symptomlist.html'
 })
-export class SymptomlistPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SymptomlistPage');
+export class SymptomlistPage implements OnInit{
+  symGroup: {body: string, symptoms: Symptom[], icon: string }[];
+  constructor(
+      private navParams:NavParams,
+      private  alertCtrl:AlertController){}
+
+  ngOnInit(){
+    this.symGroup = this.navParams.data;
   }
 
+  // onAddToFavorite(selectedQuote: Quote){
+  //   const alert = this.alertCtrl.create({
+  //     title:'Add quote',
+  //     subTitle:'Are you sure?',
+  //     message:'Are you sure you want to add the quote?',
+  //     buttons:[
+  //       {
+  //         text: 'Yes, go ahead',
+  //         handler: () =>{
+  //           console.log('OK');
+  //         }
+  //       },{
+  //         text: 'No, I change my mind',
+  //         handler: () =>{
+  //           console.log('Cancelled');
+  //         }
+  //       }
+  //     ]
+  //   });
+  //
+  //   alert.present();
+  // }
 }
