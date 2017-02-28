@@ -1,22 +1,21 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, OnInit } from '@angular/core';
+import {  NavParams, AlertController } from 'ionic-angular';
 
-/*
-  Generated class for the Symptoms page.
+import { Symptom } from "../../data/symptoms.interface";
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+import symptoms from '../../data/symptoms';
+import {ListofsymPage} from "../listofsym/listofsym";
+
 @Component({
   selector: 'page-symptoms',
   templateUrl: 'symptoms.html'
 })
-export class SymptomsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+export class SymptomsPage implements OnInit{
+  symptomCollection: {body: string, symptoms: Symptom[], icon: string }[];
+  listofsymPage = ListofsymPage;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SymptomsPage');
+  ngOnInit(){
+    this.symptomCollection = symptoms;
   }
-
 }

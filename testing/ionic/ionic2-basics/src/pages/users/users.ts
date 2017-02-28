@@ -14,4 +14,7 @@ export class UsersPage {
   onLoadUser(name: string){
     this.navCtrl.push(UserPage, {userName: name});
   }
+  ionViewCanEnter(): boolean | promise<boolean> {
+    console.log('ionViewCanEnter');
+  }
 }
