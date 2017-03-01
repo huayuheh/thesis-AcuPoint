@@ -28,12 +28,12 @@ export class QuotesPage implements OnInit{
       message:'Are you sure you want to add the quote?',
       buttons:[
         {
-          text: 'Yes, go ahead',
+          text: 'Yes',
           handler: () =>{
             console.log('OK');
           }
         },{
-          text: 'No, I change my mind',
+          text: 'No',
           handler: () =>{
             console.log('Cancelled');
           }
