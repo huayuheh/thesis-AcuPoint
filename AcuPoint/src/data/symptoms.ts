@@ -6,7 +6,7 @@ export default [
         id: '1',
         name: 'Cold',
         othernames:'Cold and flu',
-        description: 'Believe you can and you\'re halfway there',
+        description: 'Believe you can and you can and you are halfway there',
         image:''
       },
       {

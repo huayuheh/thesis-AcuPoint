@@ -6,7 +6,7 @@ import {RecordPage} from "../record/record";
 @Component({
   selector:'page-tabs',
   template:`
-    <ion-tabs selectedIndex="1">
+    <ion-tabs selectedIndex="0">
         <ion-tab [root]="homePage" tabTitle="Home" tabIcon="home"></ion-tab>
         <ion-tab [root]="symptomsPage" tabTitle="Symptom" tabIcon="search"></ion-tab>
         <ion-tab [root]="recordPage" tabTitle="Record" tabIcon="folder"></ion-tab>
