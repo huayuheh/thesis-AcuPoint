@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h1 text-center>Create An Account</h1>
+  <ion-list>
+    <ion-row>
+      <ion-col width-50>
+        <ion-item>
+          <ion-input type="text" placeholder="Last Name"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col width-50>
+        <ion-item>
+          <ion-input type="text" placeholder="First Name"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-item>
+      <ion-input type="email" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <button ion-button block [navPush]="tabsPage">
+    Log in
+  </button>
+  <br>
+  <hr>
+
+  <button ion-button outline block icon-left [navPush]="facebooksigninPage">
+    <ion-icon name='logo-facebook' ></ion-icon>
+    Sign in with Facebook
+  </button>
+  <button ion-button outline block icon-left [navPush]="googlesigninPage">
+    <ion-icon name='logo-googleplus'></ion-icon>
+    Sign in with Google+
+  </button>
+  <div class="bottom">
+    <button ion-button clear block [navPush]="loginPage">
+      Have an account? Log in
+    </button>
+  </div>
+
+</ion-content>
