@@ -1,18 +1,26 @@
-<!--
-  Generated template for the Record page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
     <ion-title>record</ion-title>
   </ion-navbar>
-
+  <ion-toolbar no-border-top>
+    <ion-segment>
+      <ion-segment-button value="symptom">
+        Symptom
+      </ion-segment-button>
+      <ion-segment-button value="acupoint">
+        Acupoint
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 
 <ion-content padding>
-
+  <img>
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="leaf" item-left></ion-icon>Headache
+    </button>
+  </ion-list>
 </ion-content>
