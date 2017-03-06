@@ -1,8 +1,12 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>record</ion-title>
+    <ion-title>Record</ion-title>
   </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
   <ion-toolbar no-border-top>
     <ion-segment>
       <ion-segment-button value="symptom">
@@ -13,13 +17,9 @@
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
-</ion-header>
-
-
-<ion-content padding>
   <img>
   <ion-list>
-    <button ion-item>
+    <button ion-item [navPush]="recorddetailPage">
       <ion-icon name="leaf" item-left></ion-icon>Headache
     </button>
   </ion-list>

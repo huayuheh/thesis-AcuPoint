@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { RecorddetailPage } from '../recorddetail/recorddetail';
 /*
   Generated class for the Record page.
 
@@ -13,10 +13,6 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class RecordPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad RecordPage');
-  }
+  recorddetailPage = RecorddetailPage;
 
 }

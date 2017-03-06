@@ -1,0 +1,80 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Headache</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div text-center>
+    <h3 >Pain Rate</h3>
+    <img src="assets/images/pain_rate_0.jpg">
+    <div class="box">
+      <p>Great! You relieve headache problem for 1 day. Keep doing treatments to relieve it forever.</p>
+    </div>
+  </div>
+
+
+
+<h3>Timeline</h3>
+  <div padding>
+    <ion-segment>
+      <ion-segment-button value="day">
+        Day
+      </ion-segment-button>
+      <ion-segment-button value="week">
+        Week
+      </ion-segment-button>
+      <ion-segment-button value="month">
+        Month
+      </ion-segment-button>
+
+    </ion-segment>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-card>
+    <ion-card-content>
+      <canvas #barCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+<h3>Doughnut Chart</h3>
+  <ion-card>
+    <ion-card-content>
+      <canvas #doughnutCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+
+
+<h3>History</h3>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="leaf" item-left></ion-icon>
+      2016/11/02 20:17
+    </ion-item>
+    <ion-item>
+      <ion-icon name="leaf" item-left></ion-icon>
+      2016/11/02 20:30
+    </ion-item>
+    <ion-item>
+      <ion-icon name="leaf" item-left></ion-icon>
+      2016/11/02 21:06
+    </ion-item>
+    <ion-item>
+      <ion-icon name="leaf" item-left></ion-icon>
+      2016/11/03 08:35
+    </ion-item>
+    <ion-item>
+      <ion-icon name="leaf" item-left></ion-icon>
+      2016/11/03 22:54
+    </ion-item>
+  </ion-list>
+</ion-content>
