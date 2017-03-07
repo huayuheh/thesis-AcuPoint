@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Baseline</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h3>Rate your Headache Pain</h3>
+  <ion-item>
+    <ion-range min="0" max="10" step="1" pin="true" snaps="true" [(ngModel)]="baseline" color="danger">
+      <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+      <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+    </ion-range>
+  </ion-item>
+
+  <button ion-button full [navPush]="treatmentlistPage">Find Treatment</button>
+</ion-content>

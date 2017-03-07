@@ -9,15 +9,14 @@
 
 <ion-content padding>
 <ion-list>
-  <ion-item *ngFor = "let symptom of symGroup.symptoms">
-    <ion-avatar item-left>
-      <img>
-    </ion-avatar>
+  <button
+    ion-item *ngFor="let symptom of symGroup.symptoms"
+    [navPush]="baselinePage">
+    <ion-icon [name]="symGroup.icon" item-left></ion-icon>
     <h2>{{symptom.name}}</h2>
-    <h3>{{symptom.othernames}}</h3>
+    <p>{{symptom.othernames}}</p>
     <p>{{symptom.description}}</p>
-
-  </ion-item>
+  </button>
 </ion-list>
 
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  NavParams, AlertController } from 'ionic-angular';
 import { Symptom } from "../../data/symptoms.interface";
+import {BaselinePage} from "../baseline/baseline";
 
 
 @Component({
@@ -18,7 +19,7 @@ export class SymptomlistPage implements OnInit{
   ngOnInit(){
     this.symGroup = this.navParams.data;
   }
-
+  baselinePage = BaselinePage;
   // onAddToFavorite(selectedQuote: Quote){
   //   const alert = this.alertCtrl.create({
   //     title:'Add quote',

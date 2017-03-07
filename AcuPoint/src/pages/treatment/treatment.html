@@ -1,0 +1,16 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>treatment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  {{counter}}
+  <button ion-button ng-click='startTimer()'>Start</button>
+    <button ion-button ng-click='stopTimer()'>Stop</button>
+  <button ion-button full [navPush]="feedbackPage">Finish Treatment</button>
+</ion-content>

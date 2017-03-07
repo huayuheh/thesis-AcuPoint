@@ -1,7 +1,7 @@
 var five = require("johnny-five");
 // 若有必要，請自行設置序列埠
 // var board = new five.Board({ port: "COM4" });
-var board = new five.Board({ port: "/dev/cu.usbmodem14131" });
+var board = new five.Board({ port: "/dev/cu.usbmodem1411" });
 //var board = new five.Board();
 
 board.on("ready", function() {

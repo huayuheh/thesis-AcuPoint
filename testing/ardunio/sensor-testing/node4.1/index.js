@@ -1,6 +1,6 @@
 var com = require("serialport");
 // 請自行修改序列埠設定
-var serialPort = new com.SerialPort("/dev/cu.usbmodem14131", {
+var serialPort = new com.SerialPort("/dev/cu.usbmodem1411", {
     baudrate: 9600,
     parser: com.parsers.readline("\n")
 });

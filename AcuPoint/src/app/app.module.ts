@@ -13,9 +13,18 @@ import { HomePage } from '../pages/home/home';
 import { SymptomsPage } from '../pages/symptoms/symptoms';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SymptomlistPage } from "../pages/symptomlist/symptomlist";
+import {BaselinePage} from "../pages/baseline/baseline";
+import {TreatmentlistPage} from "../pages/treatmentlist/treatmentlist";
+import {BluetoothPage} from "../pages/bluetooth/bluetooth";
+import {DevicePage} from "../pages/device/device";
+import {FindpointPage} from "../pages/findpoint/findpoint";
+import {TreatmentPage} from "../pages/treatment/treatment";
+import {FeedbackPage} from "../pages/feedback/feedback";
 
 import { RecordPage } from '../pages/record/record';
 import { RecorddetailPage } from '../pages/recorddetail/recorddetail';
+
+
 
 @NgModule({
   declarations: [
@@ -30,6 +39,13 @@ import { RecorddetailPage } from '../pages/recorddetail/recorddetail';
     SymptomsPage,
     TabsPage,
     SymptomlistPage,
+    BaselinePage,
+    TreatmentlistPage,
+    BluetoothPage,
+    DevicePage,
+    FindpointPage,
+    TreatmentPage,
+    FeedbackPage,
 
     RecordPage,
     RecorddetailPage
@@ -52,6 +68,13 @@ import { RecorddetailPage } from '../pages/recorddetail/recorddetail';
     SymptomsPage,
     TabsPage,
     SymptomlistPage,
+    BaselinePage,
+    TreatmentlistPage,
+    BluetoothPage,
+    DevicePage,
+    FindpointPage,
+    TreatmentPage,
+    FeedbackPage,
 
     RecordPage,
     RecorddetailPage

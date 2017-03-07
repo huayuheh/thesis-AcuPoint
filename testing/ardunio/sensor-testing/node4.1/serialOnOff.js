@@ -2,7 +2,7 @@ var stdin = process.stdin;
 // stdin.setEncoding( 'utf8' );
 
 var com = require("serialport");
-var serialPort = new com.SerialPort("/dev/cu.usbmodem14131");
+var serialPort = new com.SerialPort("/dev/cu.usbmodem1411");
 
 serialPort.on("open", function(error){
   process.stdout.write('請輸入on或off開、關燈。\n');
