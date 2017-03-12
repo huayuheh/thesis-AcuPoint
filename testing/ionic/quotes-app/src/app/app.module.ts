@@ -7,6 +7,7 @@ import {QuotesPage} from "../pages/quotes/quotes";
 import {QuotePage} from "../pages/quote/quote";
 import { SettingPage } from "../pages/setting/setting";
 import { TabsPage } from "../pages/tabs/tabs";
+import {QuotesService} from "../services/quotes";
 @NgModule({
   declarations: [
     MyApp,
@@ -30,6 +31,8 @@ import { TabsPage } from "../pages/tabs/tabs";
     SettingPage,
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},
+  QuotesService
+  ]
 })
 export class AppModule {}
