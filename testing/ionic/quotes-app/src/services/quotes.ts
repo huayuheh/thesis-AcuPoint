@@ -1,4 +1,4 @@
-import { Quote } from "../date/quote.interface";
+import { Quote } from "../data/quote.interface";
 
 
 export class QuotesService{
@@ -8,8 +8,8 @@ export class QuotesService{
     this.favoriteQuotes.push(quote);
   }
   removeQuoteFromFavorites(quote:Quote) {
-    const positon = this.favoriteQuotes.findIndex((quoteEl: Quote) =>{
-      return quoteEl.id = quote.id;
+    const position = this.favoriteQuotes.findIndex((quoteEl: Quote) => {
+      return quoteEl.id == quote.id;
     });
     this.favoriteQuotes.splice(position, 1);
   }
