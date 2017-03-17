@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Platform } from 'ionic-angular';
 import { RecorddetailPage } from '../recorddetail/recorddetail';
-/*
-  Generated class for the Record page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-record',
   templateUrl: 'record.html'
@@ -14,5 +9,13 @@ import { RecorddetailPage } from '../recorddetail/recorddetail';
 export class RecordPage {
 
   recorddetailPage = RecorddetailPage;
+
+  record: string = "symptoms";
+  isAndroid: boolean = false;
+
+  constructor(platform: Platform) {
+    this.isAndroid = platform.is('android');
+  }
+
 
 }

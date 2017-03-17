@@ -9,22 +9,18 @@ import { FacebooksigninPage } from "../pages/facebooksignin/facebooksignin";
 import { GooglesigninPage } from "../pages/googlesignin/googlesignin";
 
 import { HomePage } from '../pages/home/home';
-
+import { HistoryPage } from '../pages/history/history';
 import { SymptomsPage } from '../pages/symptoms/symptoms';
+
+
 import { TabsPage } from '../pages/tabs/tabs';
 import { SymptomlistPage } from "../pages/symptomlist/symptomlist";
-import {BaselinePage} from "../pages/baseline/baseline";
-import {TreatmentlistPage} from "../pages/treatmentlist/treatmentlist";
-import {BluetoothPage} from "../pages/bluetooth/bluetooth";
-import {DevicePage} from "../pages/device/device";
-import {FindpointPage} from "../pages/findpoint/findpoint";
-import {TreatmentPage} from "../pages/treatment/treatment";
-import {FeedbackPage} from "../pages/feedback/feedback";
 
 import { RecordPage } from '../pages/record/record';
 import { RecorddetailPage } from '../pages/recorddetail/recorddetail';
-
-
+import {DevicePage} from "../pages/device/device";
+import {ProfilePage} from "../pages/profile/profile";
+import {ConnectPage} from "../pages/connect/connect";
 
 @NgModule({
   declarations: [
@@ -36,18 +32,15 @@ import { RecorddetailPage } from '../pages/recorddetail/recorddetail';
     GooglesigninPage,
 
     HomePage,
-    SymptomsPage,
-    TabsPage,
-    SymptomlistPage,
-    BaselinePage,
-    TreatmentlistPage,
-    BluetoothPage,
     DevicePage,
-    FindpointPage,
-    TreatmentPage,
-    FeedbackPage,
-
+    HistoryPage,
+    SymptomsPage,
+    ProfilePage,
     RecordPage,
+    TabsPage,
+
+    ConnectPage,
+    SymptomlistPage,
     RecorddetailPage
 
 
@@ -65,19 +58,17 @@ import { RecorddetailPage } from '../pages/recorddetail/recorddetail';
     GooglesigninPage,
 
     HomePage,
-    SymptomsPage,
-    TabsPage,
-    SymptomlistPage,
-    BaselinePage,
-    TreatmentlistPage,
-    BluetoothPage,
     DevicePage,
-    FindpointPage,
-    TreatmentPage,
-    FeedbackPage,
-
+    HistoryPage,
+    SymptomsPage,
+    ProfilePage,
     RecordPage,
+    TabsPage,
+
+    ConnectPage,
+    SymptomlistPage,
     RecorddetailPage
+
 
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

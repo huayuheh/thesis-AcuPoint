@@ -24396,3 +24396,7 @@ h3 {
   bottom: 0;
   width: 92%;
 }
+
+page-profile .right {
+  float: right;
+}

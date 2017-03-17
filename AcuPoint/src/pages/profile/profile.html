@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-25>
+      <img src="assets/images/Group1.jpg" floting>
+    </ion-col>
+    <ion-col col-75>
+      <h4 text-right>Alexis</h4>
+      <h4 text-right>Zhang</h4>
+      <h4 text-right>1990/01/28</h4>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-item>
+      <b>Email</b>
+      <button ion-button clear item-right icon-only >
+        <ion-icon name='create-outline'></ion-icon>
+      </button>
+      <span class="right">alexiszhang@gmail.com</span>
+    </ion-item>
+    <ion-item>
+      <b>Password</b>
+      <button ion-button clear item-right icon-only >
+        <ion-icon name='create-outline'></ion-icon>
+      </button>
+      <span class="right">********</span>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button full [navPush]="loadingPage">Log Out</button>
+
+</ion-content>

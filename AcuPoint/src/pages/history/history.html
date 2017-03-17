@@ -1,0 +1,38 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>History</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-row>
+    <ion-col col-10>
+      <ion-searchbar (ionInput)="getItems($event)">
+
+      </ion-searchbar>
+    </ion-col>
+    <ion-col col-2>
+      <button ion-button icon-only clear>
+        <ion-icon name="funnel" ></ion-icon>
+      </button>
+
+    </ion-col>
+  </ion-row>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+
+
+
+      {{ item }}
+      <button ion-button clear icon-only item-right >
+        <ion-icon name="heart-outline" ></ion-icon>
+      </button>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

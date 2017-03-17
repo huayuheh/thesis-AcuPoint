@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {FindpointPage} from "../findpoint/findpoint";
+import {ConnectPage} from "../connect/connect";
 
 /*
   Generated class for the Device page.
@@ -14,6 +14,11 @@ import {FindpointPage} from "../findpoint/findpoint";
 })
 export class DevicePage {
 
-  findpointPage = FindpointPage;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad DevicePage');
+  }
+  connectPage = ConnectPage;
 
 }
