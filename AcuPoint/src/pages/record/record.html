@@ -1,26 +1,49 @@
-
 <ion-header>
-  <ion-navbar>
-    <ion-title>Record</ion-title>
+  <ion-navbar no-border-bottom>
+    <ion-title>
+      Record
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-
-<ion-content padding>
+<ion-content>
   <ion-toolbar no-border-top>
-    <ion-segment>
-      <ion-segment-button value="symptom">
-        Symptom
+    <ion-segment [(ngModel)]="record">
+      <ion-segment-button value="symptoms">
+        Symptoms
       </ion-segment-button>
-      <ion-segment-button value="acupoint">
-        Acupoint
+      <ion-segment-button value="points">
+        Points
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
-  <img>
-  <ion-list>
-    <button ion-item [navPush]="recorddetailPage">
-      <ion-icon name="leaf" item-left></ion-icon>Headache
-    </button>
-  </ion-list>
+
+  <div [ngSwitch]="record">
+
+    <div *ngSwitchCase="'symptoms'">
+      <img src="assets/images/area.jpg">
+
+      <ion-list>
+
+        <button ion-item [navPush]="recorddetailPage">Headache</button>
+        <button ion-item [navPush]="recorddetailPage">Cold</button>
+
+      </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'points'">
+      <img src="assets/images/area.jpg">
+
+      <ion-list>
+
+        <button ion-item [navPush]="recorddetailPage">The temples</button>
+        <button ion-item [navPush]="recorddetailPage">Third eye point</button>
+
+      </ion-list>
+    </div>
+
+
+  </div>
+
 </ion-content>
+

@@ -9,13 +9,18 @@ import { FacebooksigninPage } from "../pages/facebooksignin/facebooksignin";
 import { GooglesigninPage } from "../pages/googlesignin/googlesignin";
 
 import { HomePage } from '../pages/home/home';
-
+import { HistoryPage } from '../pages/history/history';
 import { SymptomsPage } from '../pages/symptoms/symptoms';
+
+
 import { TabsPage } from '../pages/tabs/tabs';
 import { SymptomlistPage } from "../pages/symptomlist/symptomlist";
 
 import { RecordPage } from '../pages/record/record';
 import { RecorddetailPage } from '../pages/recorddetail/recorddetail';
+import {DevicePage} from "../pages/device/device";
+import {ProfilePage} from "../pages/profile/profile";
+import {ConnectPage} from "../pages/connect/connect";
 
 @NgModule({
   declarations: [
@@ -27,11 +32,15 @@ import { RecorddetailPage } from '../pages/recorddetail/recorddetail';
     GooglesigninPage,
 
     HomePage,
+    DevicePage,
+    HistoryPage,
     SymptomsPage,
-    TabsPage,
-    SymptomlistPage,
-
+    ProfilePage,
     RecordPage,
+    TabsPage,
+
+    ConnectPage,
+    SymptomlistPage,
     RecorddetailPage
 
 
@@ -49,12 +58,17 @@ import { RecorddetailPage } from '../pages/recorddetail/recorddetail';
     GooglesigninPage,
 
     HomePage,
+    DevicePage,
+    HistoryPage,
     SymptomsPage,
-    TabsPage,
-    SymptomlistPage,
-
+    ProfilePage,
     RecordPage,
+    TabsPage,
+
+    ConnectPage,
+    SymptomlistPage,
     RecorddetailPage
+
 
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
