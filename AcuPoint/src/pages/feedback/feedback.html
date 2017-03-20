@@ -8,5 +8,16 @@
 
 
 <ion-content padding>
-  <button ion-button full [navPush]="tabsPage">Finish Treatment</button>
+  <h3>Rate the Pain </h3>
+  <ion-item>
+    <ion-range min="0" max="10" step="1" pin="true" snaps="true" [(ngModel)]="baseline" color="danger">
+      <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+      <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+    </ion-range>
+  </ion-item>
+  <h3>save it</h3>
+  <button ion-button clear icon-only>
+    <ion-icon name="heart"></ion-icon>
+  </button>
+  <button ion-button full [navPush]="homePage">Finish Treatment</button>
 </ion-content>

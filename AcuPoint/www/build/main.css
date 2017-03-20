@@ -24391,6 +24391,13 @@ h3 {
   text-align: center;
 }
 
+page-findpoint .point {
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+  width: 80%;
+}
+
 .bottom {
   position: fixed;
   bottom: 0;
@@ -24399,4 +24406,31 @@ h3 {
 
 page-profile .right {
   float: right;
+}
+
+page-symptom #option {
+  display: none;
+}
+
+page-treatment #option {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  display: none;
+  background-color: rgba(200, 200, 200, 0.7);
+}
+
+page-treatment .choose {
+  position: relative;
+  top: 40%;
+}
+
+page-treatmentlist .card {
+  position: relative;
+}
+
+page-treatmentlist .fab-map {
+  top: 30px;
+  z-index: 50;
 }

@@ -25,8 +25,8 @@ export class FindpointPage {
 
   doConfirm() {
     let confirm = this.alerCtrl.create({
-      title: 'Use this lightsaber?',
-      message: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
+
+      message: 'AcuPoint would like to access your CAMERA',
       buttons: [
         {
           text: 'Disagree',

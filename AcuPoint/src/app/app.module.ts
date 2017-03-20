@@ -11,7 +11,7 @@ import { GooglesigninPage } from "../pages/googlesignin/googlesignin";
 import { HomePage } from '../pages/home/home';
 import { HistoryPage } from '../pages/history/history';
 import { SymptomsPage } from '../pages/symptoms/symptoms';
-
+import { SymptomPage } from '../pages/symptom/symptom';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { SymptomlistPage } from "../pages/symptomlist/symptomlist";
@@ -21,6 +21,13 @@ import { RecorddetailPage } from '../pages/recorddetail/recorddetail';
 import {DevicePage} from "../pages/device/device";
 import {ProfilePage} from "../pages/profile/profile";
 import {ConnectPage} from "../pages/connect/connect";
+
+import { BaselinePage } from "../pages/baseline/baseline";
+import { TreatmentlistPage } from "../pages/treatmentlist/treatmentlist";
+import { FindpointPage } from "../pages/findpoint/findpoint";
+import { TreatmentPage } from "../pages/treatment/treatment";
+import { FeedbackPage } from "../pages/feedback/feedback";
+
 
 @NgModule({
   declarations: [
@@ -35,13 +42,20 @@ import {ConnectPage} from "../pages/connect/connect";
     DevicePage,
     HistoryPage,
     SymptomsPage,
+    SymptomPage,
     ProfilePage,
     RecordPage,
     TabsPage,
 
     ConnectPage,
+    RecorddetailPage,
+
     SymptomlistPage,
-    RecorddetailPage
+    BaselinePage,
+    TreatmentlistPage,
+    FindpointPage,
+    TreatmentPage,
+    FeedbackPage
 
 
   ],
@@ -61,14 +75,19 @@ import {ConnectPage} from "../pages/connect/connect";
     DevicePage,
     HistoryPage,
     SymptomsPage,
+    SymptomPage,
     ProfilePage,
     RecordPage,
     TabsPage,
 
     ConnectPage,
     SymptomlistPage,
-    RecorddetailPage
-
+    RecorddetailPage,
+    BaselinePage,
+    TreatmentlistPage,
+    FindpointPage,
+    TreatmentPage,
+    FeedbackPage
 
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

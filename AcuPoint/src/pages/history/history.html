@@ -23,16 +23,14 @@
     </ion-col>
   </ion-row>
 
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-
-
-
-      {{ item }}
-      <button ion-button clear icon-only item-right >
+  <ion-item-group>
+    <ion-item-divider color="light">TODAY</ion-item-divider>
+    <ion-item>
+      <button ion-button clear icon-only item-left >
         <ion-icon name="heart-outline" ></ion-icon>
       </button>
-
+    Headache: Third eye point
+      <span item-right>2 mins</span>
     </ion-item>
-  </ion-list>
+  </ion-item-group>
 </ion-content>

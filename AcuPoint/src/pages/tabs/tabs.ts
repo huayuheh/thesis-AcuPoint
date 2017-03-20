@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {HomePage} from "../home/home";
-import {SymptomsPage} from "../symptoms/symptoms";
+import {SymptomPage} from "../symptom/symptom";
 import {RecordPage} from "../record/record";
 import {HistoryPage} from "../history/history";
 import {ProfilePage} from "../profile/profile";
@@ -11,7 +11,7 @@ import {ProfilePage} from "../profile/profile";
     <ion-tabs selectedIndex="0">
         <ion-tab [root]="homePage" tabTitle="Home" tabIcon="home"></ion-tab>
         <ion-tab [root]="historyPage" tabTitle="History" tabIcon="folder"></ion-tab>
-        <ion-tab [root]="symptomsPage" tabTitle="Symptom" tabIcon="search"></ion-tab>
+        <ion-tab [root]="symptomPage" tabTitle="Symptom" tabIcon="search"></ion-tab>
         <ion-tab [root]="recordPage" tabTitle="Record" tabIcon="clipboard"></ion-tab>
         <ion-tab [root]="profilePage" tabTitle="Profile" tabIcon="person"></ion-tab>
     </ion-tabs>
@@ -20,7 +20,7 @@ import {ProfilePage} from "../profile/profile";
 export class TabsPage{
   homePage = HomePage;
   historyPage = HistoryPage;
-  symptomsPage = SymptomsPage;
+  symptomPage = SymptomPage;
   recordPage = RecordPage;
   profilePage = ProfilePage;
 }

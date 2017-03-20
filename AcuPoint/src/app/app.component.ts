@@ -4,6 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 //import { LoadingPage } from '../pages/loading/loading';
 import { TabsPage } from '../pages/tabs/tabs';
+//import { FindpointPage } from  '../pages/findpoint/findpoint';
 
 @Component({
   templateUrl: 'app.html'

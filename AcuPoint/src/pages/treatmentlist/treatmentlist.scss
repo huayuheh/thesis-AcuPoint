@@ -1,3 +1,10 @@
 page-treatmentlist {
+  .card {
+    position: relative
+  }
+  .fab-map {
+    top: 30px;
 
+    z-index: 50;
+  }
 }

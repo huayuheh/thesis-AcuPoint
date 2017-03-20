@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { TabsPage } from '../tabs/tabs';
+import { HomePage } from '../home/home';
 
 /*
   Generated class for the Feedback page.
@@ -13,7 +13,7 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'feedback.html'
 })
 export class FeedbackPage {
-  tabsPage = TabsPage;
+  homePage = HomePage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 

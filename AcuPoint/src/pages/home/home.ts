@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {DevicePage} from "../device/device";
+import {SymptomsPage} from "../symptoms/symptoms";
 
 /*
   Generated class for the Home page.
@@ -15,5 +16,5 @@ import {DevicePage} from "../device/device";
 export class HomePage {
 
   devicePage = DevicePage;
-
+  symptomsPage = SymptomsPage;
 }

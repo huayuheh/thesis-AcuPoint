@@ -8,9 +8,21 @@
 </ion-header>
 
 
-<ion-content padding>
-  {{counter}}
-  <button ion-button ng-click='startTimer()'>Start</button>
+<ion-content >
+  <div>
+    <img src="assets/images/timer.jpg">
+    <br>
+    <button ion-button ng-click='startTimer()'>Start</button>
     <button ion-button ng-click='stopTimer()'>Stop</button>
-  <button ion-button full [navPush]="feedbackPage">Finish Treatment</button>
+  </div>
+
+
+  <div id="option">
+    <div class="choose">
+      <button ion-button full (click)='back()'>add two more mins</button>
+      <button ion-button full>try another point</button>
+      <button ion-button full [navPush]="feedbackPage">finish treatment</button>
+    </div>
+
+  </div>
 </ion-content>

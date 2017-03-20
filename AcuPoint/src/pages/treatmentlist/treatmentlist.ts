@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {BluetoothPage} from "../bluetooth/bluetooth";
+import {FindpointPage} from "../findpoint/findpoint";
 
 /*
   Generated class for the Treatmentlist page.
@@ -14,6 +14,6 @@ import {BluetoothPage} from "../bluetooth/bluetooth";
 })
 export class TreatmentlistPage {
 
-bluetoothPage = BluetoothPage;
+  findpointPage = FindpointPage;
 
 }
