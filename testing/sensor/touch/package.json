@@ -1,15 +1,14 @@
 {
-  "name": "button-led",
+  "name": "touch",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "touch.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "onoff": "^1.1.1",
-    "rpi-rgb": "^1.1.10"
+    "ev3-js-touch-sensor": "^0.1.6"
   }
 }
