@@ -1,7 +1,7 @@
 var RgbChannel = require('rpi-rgb').Channel;
 var Colour = require('rpi-rgb').Colour;
 
-var channel1 = new RgbChannel(25,24,23);
+var channel1 = new RgbChannel(6,5,4);
 
 var red = new Colour(100,0,0);
 var softRed = new Colour(10,0,0);
