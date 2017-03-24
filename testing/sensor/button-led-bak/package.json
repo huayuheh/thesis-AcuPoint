@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "onoff": "^1.1.1"
+    "onoff": "^1.1.1",
+    "rpi-rgb": "^1.1.10"
   }
 }
