@@ -9,13 +9,6 @@ import {GooglesigninPage} from "../googlesignin/googlesignin";
   selector: 'page-login',
   templateUrl: 'login.html'
 })
-@Directive({
-  selector: '[hideTabs]'
-})
-
-export class HideTabsDirective {
-  constructor(private viewCtrl: ViewController) {
-
 
 export class LoginPage {
 
