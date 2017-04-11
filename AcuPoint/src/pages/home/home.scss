@@ -1,3 +1,26 @@
 page-home {
-
+  .left_box, .right_box{
+    width: 25%;
+    float: left;
+    text-align: center;
+  }
+  .center_box{
+    width: 50%;
+    float: left;
+    text-align: center;
+  }
+  .center_box img{
+    margin: 23px 32px ;
+  }
+  .side_box{
+    width: 100%;
+    padding: 16px 0;
+    /*border: 1px solid black;*/
+  }
+  .big_text{
+    font-size: 32px;
+    font-weight: 600;
+    line-height:48px;
+    color: #65A1C8;
+  }
 }

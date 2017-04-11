@@ -11,3 +11,8 @@ export class ProfilePage {
   loadingPage = LoadingPage;
 
 }
+
+function removeTab(){
+  document.querySelector("ion-tabbar")['style'].display = 'none';
+}
+

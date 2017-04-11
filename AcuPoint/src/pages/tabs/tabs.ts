@@ -9,7 +9,12 @@ import {ProfilePage} from "../profile/profile";
   selector:'page-tabs',
   template:`
     <ion-tabs selectedIndex="0">
-        <ion-tab [root]="homePage" tabTitle="Home" tabIcon="home"></ion-tab>
+
+
+  <!--<ion-tab title="LIVE" icon="tab-live " href="tab/live"></ion-tab>-->
+    
+        <ion-tab [root]="homePage" tabTitle="my-test" tabIcon="my-test" class="my-test"></ion-tab>
+        <!--<ion-tab [root]="homePage" tabTitle="Home">123</ion-tab>-->
         <ion-tab [root]="historyPage" tabTitle="History" tabIcon="folder"></ion-tab>
         <ion-tab [root]="symptomPage" tabTitle="Symptom" tabIcon="search"></ion-tab>
         <ion-tab [root]="recordPage" tabTitle="Record" tabIcon="clipboard"></ion-tab>

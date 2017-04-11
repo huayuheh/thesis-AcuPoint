@@ -16,3 +16,17 @@ h3{
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.tabs-ios .tabbar{
+  background-color: white;
+  border-top: 2px solid $color-orange;
+}
+
+.button-full-ios{
+  background-color: #1b223e;
+  background-image:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $color-orange),     color-stop(120%, #F58F75));
+  //background-color: -webkit-linear-gradient(#F9B763, #F58F75);
+  border-radius: 1.4em;
+  color: white;
+  font-weight: 800;
+}

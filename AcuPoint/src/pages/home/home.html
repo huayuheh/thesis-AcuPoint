@@ -12,11 +12,35 @@
 </ion-header>
 
 <ion-content padding>
-  <div text-center>
-    <h1>This Week</h1>
-    <img src="assets/images/home.jpg">
+  <h2>This week</h2>
+  <div class="summery text_center">
+    <div class="left_box">
+      <div class="side_box">
+        <p >Symptoms</p>
+        <b class=big_text>0</b>
+      </div>
+      <div class="side_box">
+        <p >Treats</p>
+        <b class=big_text>0</b>
+      </div>
+    </div>
+    <div class="center_box">
+      <div class="side_box">
+        <p >Pain Rate</p>
+        <img class="face" src="assets/images/Group1.jpg">
+      </div>
+    </div>
+    <div class="right_box">
+      <div class="side_box">
+        <p >Points</p>
+        <b class=big_text>0</b>
+      </div>
+      <div class="side_box">
+        <p >Time</p>
+        <b class=big_text>0</b>
+      </div>
+    </div>
 
-    <button ion-button full color="danger" [navPush]="symptomsPage" > Treat your symptom now</button>
   </div>
 
 </ion-content>
