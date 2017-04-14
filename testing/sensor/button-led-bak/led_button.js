@@ -1,103 +1,81 @@
 
 var Gpio = require('onoff').Gpio,	//onoff module (use npm install onoff)
-  button = new Gpio(18, 'in', 'both'),	//setup GPIO17 as output
-  touch = new Gpio(16, 'in', 'both'),
-  buttonup = new Gpio(20, 'in', 'both'),
-  led = new Gpio(21, 'out'),      //setup GPIO27 as output
-  ledState = 0, 		  //internal variable to track LED state (1 = on, 0 = off)
-  timer = 0;
+    button = new Gpio(18, 'in', 'both'),	//setup GPIO17 as output
+    touch = new Gpio(16, 'in', 'both'),
+    buttonup = new Gpio(20, 'in', 'both'),
+    led = new Gpio(21, 'out'),      //setup GPIO27 as output
+    ledState = 0, 		  //internal variable to track LED state (1 = on, 0 = off)
+    timer = 0,
+    level = 0;
 
 var RgbChannel = require('rpi-rgb').Channel;
 var Colour = require('rpi-rgb').Colour;
 
 var channel1 = new RgbChannel(6,5,4);// BCM 25,24,23
 
-var red = new Colour(100,0,0);
-var softRed = new Colour(10,0,0);
+
 var blue = new Colour(0,100,0);
 var white = new Colour(100,100,100);
-var yellow = new Colour(100,100,0);
 var black = new Colour(0,0,0);
 
 button.setActiveLow( true );		//optional to reverse button value
 touch.setActiveLow( true );
 buttonup.setActiveLow( true );
 
+var pattern = [[100,100,100,100], [200,200,200,200], [300,300,300,300]];
+
+function funPattern(i){
+    setTimeout(function(){ led.writeSync( 1 ); }, pattern[i][0]);
+    setTimeout(function(){ led.writeSync( 0 ); }, pattern[i][1]);
+    setTimeout(function(){ led.writeSync( 1 ); }, pattern[i][2]);
+    setTimeout(function(){ led.writeSync( 0 ); }, pattern[i][3]);
+    level = level + 1;
+}
+
+
+
 button.watch(function(err, value) {	//watch button changes
-	if (value == true){
-		timer = timer +1 ;
+        timer = timer + 1 ;
         console.log('timer:'+ timer);
-   if ( timer % 2 == 0 ){
-       //channel1.fadeRgb(black, 100, function() {});
-		//console.log('Button is OFF');
-	channel1.fadeRgb(black,500);
+
+    if ( timer % 2 == 0 ){
+        console.log('Power  is off');
+	    channel1.fadeRgb(black,500);
 	
 	}else{
-        channel1.strobeRgb(white, 100, 1500, function() {
+        console.log('Power  is on');
+        channel1.strobeRgb(white, 100, 1500);
 	
-	channel1.fadeRgb(blue,500);
+	    channel1.fadeRgb(blue,500);
 
-	touch.watch(function(err, value) {
-		if (value == true){
-			console.log('Touch is off');
-			led.writeSync( 0 );
-			
-		}else{
-			console.log('Touch is on' );
-			led.writeSync( 1 );
+        touch.watch(function(err, value) {
+            if (value == true){
+                console.log('Touch is off');
+                led.writeSync( 0 );
+            }else{
+                console.log('Touch is on' );
+                funPattern(level%3);
 
-		buttonup.watch(function(err, value) {
-	if (value == true){
-		setTimeout(function(){ led.writeSync( 1 ); }, 200);
-   		setTimeout(function(){ led.writeSync( 0 ); }, 300);
-    	setTimeout(function(){ led.writeSync( 1 ); }, 500);
-    	setTimeout(function(){ led.writeSync( 0 ); }, 600);
-		console.log('Button is ON' );
-	}else{
-		led.writeSync( 0 );
-		console.log('Button is OFF');
+                buttonup.watch(function(err, value) {
+                    if (value == true){
+
+                        funPattern(level%3);
+                    }else{
+                        led.writeSync( 0 );
+                        console.log('Button is OFF');
+                    }
+                });
+
+            }
+        });
 	}
-
-		});
-		
-
-
-
-
-				
-		}
-	
-	
-	});
-    });
-
-		console.log('Button is on');
-
-
-
-	}
-
-
-
-	}else{
-	//	led.writeSync( 0 );
-	//	console.log('Button is OFF');
-	}
- 
-
-
-
-
 });
 
 process.on('SIGINT', function(){
   button.unexport();
-  //led.unexport();
+  led.unexport();
   process.exit();
 });
-
-
-
 
 
 
