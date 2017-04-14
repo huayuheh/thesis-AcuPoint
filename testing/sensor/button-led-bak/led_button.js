@@ -29,46 +29,52 @@ function funPattern(i){
     setTimeout(function(){ led.writeSync( 0 ); }, pattern[i][1]);
     setTimeout(function(){ led.writeSync( 1 ); }, pattern[i][2]);
     setTimeout(function(){ led.writeSync( 0 ); }, pattern[i][3]);
+    console.log('level' + i );
     level = level + 1;
 }
 
 
 
 button.watch(function(err, value) {	//watch button changes
+    if (value == true){
+
         timer = timer + 1 ;
         console.log('timer:'+ timer);
 
-    if ( timer % 2 == 0 ){
-        console.log('Power  is off');
-	    channel1.fadeRgb(black,500);
-	
-	}else{
-        console.log('Power  is on');
-        channel1.strobeRgb(white, 100, 1500);
-	
-	    channel1.fadeRgb(blue,500);
+        if ( timer % 2 == 0 ){
+            console.log('Power  is off');
+            channel1.fadeRgb(black,500);
 
-        touch.watch(function(err, value) {
-            if (value == true){
-                console.log('Touch is off');
-                led.writeSync( 0 );
-            }else{
-                console.log('Touch is on' );
-                funPattern(level%3);
+        }else{
+            console.log('Power  is on');
+            channel1.strobeRgb(white, 100, 1500);
 
-                buttonup.watch(function(err, value) {
-                    if (value == true){
+            channel1.fadeRgb(blue,500);
 
-                        funPattern(level%3);
-                    }else{
-                        led.writeSync( 0 );
-                        console.log('Button is OFF');
-                    }
-                });
+            touch.watch(function(err, value) {
+                if (value == true){
+                    console.log('Touch is off');
+                    led.writeSync( 0 );
+                }else{
+                    console.log('Touch is on' );
+                    funPattern(level%3);
 
-            }
-        });
-	}
+                    buttonup.watch(function(err, value) {
+                        if (value == true){
+
+                            funPattern(level%3);
+                        }else{
+                            led.writeSync( 0 );
+                            console.log('Button is OFF');
+                        }
+                    });
+
+                }
+            });
+	    }
+    }else{
+        //console.log('Power  is off');
+    }
 });
 
 process.on('SIGINT', function(){
